@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DasbhoardController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,3 +19,5 @@ Route::get('/', function () {
 
 //route unutk menampilkan teks salam
 Route::get('admin/dashboard', [DasbhoardController::class, 'index']);
+Route::get('admin/student', [StudentController::class, 'index']); 
+Route::get('admin/courses', [CoursesController::class, 'index']); 
