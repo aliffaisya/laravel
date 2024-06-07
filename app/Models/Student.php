@@ -10,4 +10,19 @@ class Student extends Model
     use HasFactory;
 
     protected $table = 'students';
+
+    //mendefinisikan kolom yang boleh diisi
+    protected $fillable = ['name', 'nim', 'major', 'class', 'courses_id'];
+
+    /**
+     * laravel relationship method:
+     * 1.one to one
+     *  - hasOne()   =
+     *  -
+     */
+
+    //mendefinisikan relasi ke model course
+    public function course(){
+        return $this->belongsTo(Courses::class, 'courses_id');
+    }
 }
