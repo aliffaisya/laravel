@@ -39,7 +39,7 @@ Route::get('admin/student/edit/{id}', [StudentController::class, 'edit']);
 Route::get('admin/student/edit/{id}', [StudentController::class, 'edit']);
 
 //route untuk menyimpan hasil update
-Route::put('admin/student/edit/{id}', [StudentController::class, 'update']);
+Route::put('admin/student/update/{id}', [StudentController::class, 'update']);
 
 //route untuk menghapus student
 Route::delete('admin/student/delete/{id}', [StudentController::class, 'destroy']);
